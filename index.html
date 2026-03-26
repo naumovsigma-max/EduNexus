@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduNexus — образовательная платформа</title>
+    <meta
+      name="description"
+      content="EduNexus — современная образовательная платформа с отдельными страницами для учителей, учеников и администраторов."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="index.html">
+          <span class="brand__mark">E</span>
+          <span>
+            <strong>EduNexus</strong>
+            <small>Learning Operating System</small>
+          </span>
+        </a>
+
+        <nav class="nav">
+          <a href="index.html" class="is-current">Главная</a>
+          <a href="teachers.html">Учителям</a>
+          <a href="students.html">Ученикам</a>
+          <a href="admin.html">Админам</a>
+        </nav>
+
+        <a class="button button--ghost" href="admin.html">Запустить кампус</a>
+      </header>
+
+      <main>
+        <section class="hero hero--homepage">
+          <div class="hero__content">
+            <div class="eyebrow">Современный модернизм × multi-page platform</div>
+            <h1>EduNexus объединяет школу, учеников, учителей и администраторов в одном цифровом кампусе.</h1>
+            <p class="hero__lead">
+              Теперь проект разделён на полноценные страницы по ролям: отдельный опыт для преподавателя,
+              отдельный кабинет ученика и отдельная админ-панель для загрузки материалов, управления курсами
+              и библиотекой контента.
+            </p>
+            <div class="hero__actions">
+              <a class="button" href="teachers.html">Перейти в teacher workspace</a>
+              <a class="button button--secondary" href="students.html">Открыть student app</a>
+            </div>
+            <ul class="hero__stats">
+              <li><strong>4 роли</strong><span>разделены по страницам</span></li>
+              <li><strong>1 хаб</strong><span>для материалов и аналитики</span></li>
+              <li><strong>∞</strong><span>масштабирование под школу</span></li>
+            </ul>
+          </div>
+
+          <div class="hero__panel glass-card">
+            <div class="dashboard-header">
+              <div>
+                <p>Platform overview</p>
+                <strong>Архитектура цифрового кампуса</strong>
+              </div>
+              <span class="status-badge">multi-page</span>
+            </div>
+
+            <div class="stack-grid">
+              <article class="feature-card feature-card--compact accent-purple">
+                <h3>Teachers</h3>
+                <p>Конструктор уроков, проверка заданий, аналитика класса, AI-подсказки.</p>
+              </article>
+              <article class="feature-card feature-card--compact accent-blue">
+                <h3>Students</h3>
+                <p>Личный трек, дедлайны, библиотека материалов, достижения и расписание.</p>
+              </article>
+              <article class="feature-card feature-card--compact accent-orange">
+                <h3>Admins</h3>
+                <p>Загрузка материалов, каталог ресурсов, статус публикации и управление потоками.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <div class="eyebrow">Разделено на страницы</div>
+            <h2>Каждая роль получает отдельный интерфейс вместо одной перегруженной landing-page.</h2>
+          </div>
+
+          <div class="page-grid">
+            <article class="role-card glass-card">
+              <span class="page-badge">01</span>
+              <h3>Главная</h3>
+              <p>Презентация платформы, архитектуры продукта и навигации по ролям.</p>
+              <a href="index.html">Открыть страницу</a>
+            </article>
+            <article class="role-card glass-card">
+              <span class="page-badge">02</span>
+              <h3>Учителям</h3>
+              <p>Рабочее пространство преподавателя с уроками, заданиями и аналитикой.</p>
+              <a href="teachers.html">Открыть страницу</a>
+            </article>
+            <article class="role-card glass-card">
+              <span class="page-badge">03</span>
+              <h3>Ученикам</h3>
+              <p>Персональный трек, дедлайны, активные курсы и витрина загруженных материалов.</p>
+              <a href="students.html">Открыть страницу</a>
+            </article>
+            <article class="role-card glass-card">
+              <span class="page-badge">04</span>
+              <h3>Админам</h3>
+              <p>Полноценная панель загрузки материалов с хранением библиотеки в localStorage.</p>
+              <a href="admin.html">Открыть страницу</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <div class="eyebrow">Что можно делать</div>
+            <h2>Полезный функционал уже распределён по продуктовым сценариям.</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card glass-card">
+              <span class="feature-icon">AI</span>
+              <h3>AI-помощник</h3>
+              <p>Подсказывает слабые места, генерирует задания и структурирует уроки.</p>
+            </article>
+            <article class="feature-card glass-card">
+              <span class="feature-icon">LIB</span>
+              <h3>Библиотека материалов</h3>
+              <p>Админ загружает методички, презентации и файлы, а страницы ролей показывают каталог.</p>
+            </article>
+            <article class="feature-card glass-card">
+              <span class="feature-icon">OPS</span>
+              <h3>Операционный контур</h3>
+              <p>Каждая роль видит только свой контекст, что делает проект ближе к реальному продукту.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

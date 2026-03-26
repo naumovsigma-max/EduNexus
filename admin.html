@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduNexus — админ-панель</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="admin">
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="index.html">
+          <span class="brand__mark">E</span>
+          <span>
+            <strong>EduNexus</strong>
+            <small>Admin Control Center</small>
+          </span>
+        </a>
+        <nav class="nav">
+          <a href="index.html">Главная</a>
+          <a href="teachers.html">Учителям</a>
+          <a href="students.html">Ученикам</a>
+          <a href="admin.html" class="is-current">Админам</a>
+        </nav>
+        <a class="button button--ghost" href="#upload-form">Загрузить материал</a>
+      </header>
+
+      <main>
+        <section class="page-hero glass-card">
+          <div>
+            <div class="eyebrow">Admin Panel</div>
+            <h1>Админ может загружать учебные материалы и сразу публиковать их в библиотеку платформы.</h1>
+            <p class="hero__lead">
+              Используйте форму ниже, чтобы добавить файл, тип материала, целевую аудиторию и описание.
+              Данные сохраняются в `localStorage`, поэтому список остаётся доступным после перезагрузки страницы.
+            </p>
+          </div>
+          <div class="mini-stats" id="admin-stats">
+            <article><strong data-stat="all">0</strong><span>всего материалов</span></article>
+            <article><strong data-stat="teacher">0</strong><span>для учителей</span></article>
+            <article><strong data-stat="student">0</strong><span>для учеников</span></article>
+          </div>
+        </section>
+
+        <section class="section admin-layout">
+          <form class="glass-card upload-panel" id="upload-form">
+            <div class="section-heading compact">
+              <div>
+                <div class="eyebrow">Новый материал</div>
+                <h2>Загрузка в библиотеку</h2>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <label>
+                <span>Название</span>
+                <input type="text" name="title" placeholder="Например, Геометрия: базовый конспект" required />
+              </label>
+              <label>
+                <span>Тип</span>
+                <select name="type" required>
+                  <option value="Методичка">Методичка</option>
+                  <option value="Презентация">Презентация</option>
+                  <option value="Видео">Видео</option>
+                  <option value="Практикум">Практикум</option>
+                </select>
+              </label>
+              <label>
+                <span>Аудитория</span>
+                <select name="audience" required>
+                  <option value="teacher">Учителя</option>
+                  <option value="student">Ученики</option>
+                  <option value="all">Все</option>
+                </select>
+              </label>
+              <label>
+                <span>Автор / отдел</span>
+                <input type="text" name="author" placeholder="Academic office" required />
+              </label>
+            </div>
+
+            <label>
+              <span>Описание</span>
+              <textarea name="description" rows="4" placeholder="Кратко опишите пользу и контекст использования материала." required></textarea>
+            </label>
+
+            <label class="file-input">
+              <span>Файл</span>
+              <input type="file" name="file" required />
+              <small>Файл не отправляется на сервер, но его название, размер и тип сохраняются в каталоге.</small>
+            </label>
+
+            <div class="upload-actions">
+              <button class="button" type="submit">Опубликовать материал</button>
+              <p class="form-message" id="form-message" aria-live="polite"></p>
+            </div>
+          </form>
+
+          <div class="glass-card library-panel">
+            <div class="section-heading compact section-heading--row">
+              <div>
+                <div class="eyebrow">Каталог</div>
+                <h2>Загруженные материалы</h2>
+              </div>
+              <button class="button button--secondary button--small" id="clear-materials" type="button">Очистить всё</button>
+            </div>
+            <div class="materials-grid materials-grid--admin" data-materials-list data-audience="admin"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
