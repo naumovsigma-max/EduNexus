@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EduNexus — админ-панель</title>
+    <title>EduNexus — админ панель</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,7 +19,7 @@
           <span class="brand__mark">E</span>
           <span>
             <strong>EduNexus</strong>
-            <small>Admin Control Center</small>
+            <small>Центр администрирования</small>
           </span>
         </a>
         <nav class="nav">
@@ -34,11 +34,10 @@
       <main>
         <section class="page-hero glass-card">
           <div>
-            <div class="eyebrow">Admin Panel</div>
-            <h1>Админ может загружать учебные материалы и сразу публиковать их в библиотеку платформы.</h1>
+            <div class="eyebrow">Панель администратора</div>
+            <h1>Загрузка учебных материалов с мгновенной публикацией на платформе</h1>
             <p class="hero__lead">
-              Используйте форму ниже, чтобы добавить файл, тип материала, целевую аудиторию и описание.
-              Данные сохраняются в `localStorage`, поэтому список остаётся доступным после перезагрузки страницы.
+              Добавьте файл или внешнюю ссылку укажите тип аудиторию и описание После сохранения материалы доступны для просмотра на сайте
             </p>
           </div>
           <div class="mini-stats" id="admin-stats">
@@ -60,7 +59,7 @@
             <div class="form-grid">
               <label>
                 <span>Название</span>
-                <input type="text" name="title" placeholder="Например, Геометрия: базовый конспект" required />
+                <input type="text" name="title" placeholder="Геометрия базовый конспект" required />
               </label>
               <label>
                 <span>Тип</span>
@@ -80,20 +79,25 @@
                 </select>
               </label>
               <label>
-                <span>Автор / отдел</span>
-                <input type="text" name="author" placeholder="Academic office" required />
+                <span>Автор или отдел</span>
+                <input type="text" name="author" placeholder="Академический отдел" required />
               </label>
             </div>
 
             <label>
               <span>Описание</span>
-              <textarea name="description" rows="4" placeholder="Кратко опишите пользу и контекст использования материала." required></textarea>
+              <textarea name="description" rows="4" placeholder="Кратко опишите пользу и контекст использования" required></textarea>
             </label>
 
             <label class="file-input">
               <span>Файл</span>
-              <input type="file" name="file" required />
-              <small>Файл не отправляется на сервер, но его название, размер и тип сохраняются в каталоге.</small>
+              <input type="file" name="file" />
+              <small>Файл сохраняется в браузере и доступен для просмотра</small>
+            </label>
+
+            <label>
+              <span>Или внешняя ссылка</span>
+              <input type="url" name="externalUrl" placeholder="https://example.com/material.pdf" />
             </label>
 
             <div class="upload-actions">
@@ -108,12 +112,22 @@
                 <div class="eyebrow">Каталог</div>
                 <h2>Загруженные материалы</h2>
               </div>
-              <button class="button button--secondary button--small" id="clear-materials" type="button">Очистить всё</button>
+              <button class="button button--secondary button--small" id="clear-materials" type="button">Очистить каталог</button>
             </div>
             <div class="materials-grid materials-grid--admin" data-materials-list data-audience="admin"></div>
           </div>
         </section>
       </main>
+    </div>
+
+    <div class="preview-modal" id="preview-modal">
+      <div class="preview-modal__content glass-card">
+        <div class="preview-modal__header">
+          <h3 id="preview-title">Просмотр материала</h3>
+          <button id="preview-close" type="button">Закрыть</button>
+        </div>
+        <iframe id="preview-frame" title="Просмотр материала"></iframe>
+      </div>
     </div>
 
     <script src="script.js"></script>

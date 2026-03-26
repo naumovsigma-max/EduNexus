@@ -19,7 +19,7 @@
           <span class="brand__mark">E</span>
           <span>
             <strong>EduNexus</strong>
-            <small>Student App</small>
+            <small>Кабинет ученика</small>
           </span>
         </a>
         <nav class="nav">
@@ -34,49 +34,40 @@
       <main>
         <section class="page-hero glass-card">
           <div>
-            <div class="eyebrow">Student Experience</div>
-            <h1>Личный кабинет ученика с маршрутами, дедлайнами и витриной учебных материалов.</h1>
+            <div class="eyebrow">Личный кабинет ученика</div>
+            <h1>Маршруты дедлайны и просмотр учебных материалов в одном окне</h1>
             <p class="hero__lead">
-              Ученик видит только свою траекторию: активные задания, ближайшие занятия, рекомендованные ресурсы
-              и материалы, опубликованные администраторами и преподавателями.
+              Ученик видит свою траекторию активные задания ближайшие занятия и материалы опубликованные в библиотеке
             </p>
           </div>
           <div class="mini-stats">
-            <article><strong>11</strong><span>дней streak</span></article>
+            <article><strong>11</strong><span>дней непрерывного обучения</span></article>
             <article><strong>4</strong><span>активных курса</span></article>
             <article><strong>74%</strong><span>освоение модулей</span></article>
           </div>
-        </section>
-
-        <section class="section feature-grid">
-          <article class="feature-card glass-card">
-            <span class="feature-icon">TODAY</span>
-            <h3>Сегодняшний маршрут</h3>
-            <p>Гибридный урок, мини-практикум вечером и сдача командного проекта до 18:00.</p>
-          </article>
-          <article class="feature-card glass-card">
-            <span class="feature-icon">GOAL</span>
-            <h3>Цели недели</h3>
-            <p>Закрыть модуль по алгебре, подготовить эссе и пройти тренировочный quiz по истории.</p>
-          </article>
-          <article class="feature-card glass-card">
-            <span class="feature-icon">AI</span>
-            <h3>AI-тьютор</h3>
-            <p>Советует повторение через flash cards и 10-минутный вечерний recap по сложным темам.</p>
-          </article>
         </section>
 
         <section class="section">
           <div class="section-heading section-heading--row">
             <div>
               <div class="eyebrow">Библиотека ученика</div>
-              <h2>Опубликованные материалы автоматически появляются в student app.</h2>
+              <h2>Материалы презентации и документы доступны для просмотра прямо на сайте</h2>
             </div>
             <a class="button button--secondary button--small" href="admin.html">Перейти в админку</a>
           </div>
           <div class="materials-grid" data-materials-list data-audience="student"></div>
         </section>
       </main>
+    </div>
+
+    <div class="preview-modal" id="preview-modal">
+      <div class="preview-modal__content glass-card">
+        <div class="preview-modal__header">
+          <h3 id="preview-title">Просмотр материала</h3>
+          <button id="preview-close" type="button">Закрыть</button>
+        </div>
+        <iframe id="preview-frame" title="Просмотр материала"></iframe>
+      </div>
     </div>
 
     <script src="script.js"></script>

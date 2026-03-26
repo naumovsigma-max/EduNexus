@@ -572,3 +572,50 @@ input[type='file'] {
     line-height: 1.02;
   }
 }
+
+
+.preview-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 4, 10, 0.74);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 30;
+  padding: 20px;
+}
+
+.preview-modal.is-open {
+  display: flex;
+}
+
+.preview-modal__content {
+  width: min(1100px, 100%);
+  padding: 18px;
+  border-radius: var(--radius-lg);
+}
+
+.preview-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.preview-modal__header button {
+  border: 0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+}
+
+#preview-frame {
+  width: 100%;
+  min-height: min(74vh, 820px);
+  border: 0;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+}

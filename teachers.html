@@ -19,7 +19,7 @@
           <span class="brand__mark">E</span>
           <span>
             <strong>EduNexus</strong>
-            <small>Teacher Workspace</small>
+            <small>Кабинет учителя</small>
           </span>
         </a>
         <nav class="nav">
@@ -34,11 +34,10 @@
       <main>
         <section class="page-hero glass-card">
           <div>
-            <div class="eyebrow">Teacher Workspace</div>
-            <h1>Панель преподавателя для уроков, оценивания и методической базы.</h1>
+            <div class="eyebrow">Рабочее пространство учителя</div>
+            <h1>Панель преподавателя для уроков оценивания и методической базы</h1>
             <p class="hero__lead">
-              Учитель управляет расписанием, задачами, аналитикой класса и видит последние материалы,
-              которые были загружены администраторами в общую библиотеку платформы.
+              Учитель управляет расписанием задачами аналитикой класса и видит последние материалы из библиотеки
             </p>
           </div>
           <div class="mini-stats">
@@ -48,56 +47,27 @@
           </div>
         </section>
 
-        <section class="section dashboard-layout">
-          <div class="workspace-content glass-card">
-            <div class="workspace-header">
-              <div>
-                <span>Lesson builder</span>
-                <h3>Конструктор учебного дня</h3>
-              </div>
-              <button class="button button--small">Создать урок</button>
-            </div>
-            <div class="workspace-columns">
-              <article class="workspace-card tall">
-                <h4>Сегодня в фокусе</h4>
-                <ul class="timeline">
-                  <li><strong>09:00</strong><span>Синхрон с 10А: микро-квиз + разбор ошибок.</span></li>
-                  <li><strong>11:15</strong><span>Проектная сессия: исследовательская работа в группах.</span></li>
-                  <li><strong>14:30</strong><span>Ревью домашних работ и персональные комментарии.</span></li>
-                </ul>
-              </article>
-              <article class="workspace-card">
-                <h4>AI insights</h4>
-                <p>Система рекомендует добавить визуальные карточки и короткий recap для 6 учеников с низким retention.</p>
-              </article>
-              <article class="workspace-card">
-                <h4>Прогресс класса</h4>
-                <div class="progress-ring"><strong>87%</strong><span>completion rate</span></div>
-              </article>
-            </div>
-          </div>
-
-          <aside class="workspace-sidebar glass-card">
-            <p class="sidebar-title">Ключевые модули</p>
-            <button class="module is-selected">Расписание</button>
-            <button class="module">Проверка работ</button>
-            <button class="module">Методички</button>
-            <button class="module">Аналитика</button>
-            <button class="module">Сообщество</button>
-          </aside>
-        </section>
-
         <section class="section">
           <div class="section-heading section-heading--row">
             <div>
-              <div class="eyebrow">Материалы от админов</div>
-              <h2>Общая библиотека, доступная преподавателям.</h2>
+              <div class="eyebrow">Материалы</div>
+              <h2>Общая библиотека доступная преподавателям с просмотром на сайте</h2>
             </div>
             <a class="button button--secondary button--small" href="admin.html">Управлять библиотекой</a>
           </div>
           <div class="materials-grid" data-materials-list data-audience="teacher"></div>
         </section>
       </main>
+    </div>
+
+    <div class="preview-modal" id="preview-modal">
+      <div class="preview-modal__content glass-card">
+        <div class="preview-modal__header">
+          <h3 id="preview-title">Просмотр материала</h3>
+          <button id="preview-close" type="button">Закрыть</button>
+        </div>
+        <iframe id="preview-frame" title="Просмотр материала"></iframe>
+      </div>
     </div>
 
     <script src="script.js"></script>
