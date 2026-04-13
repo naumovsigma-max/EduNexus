@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduNexus</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="home">
+<header class="topbar"><div class="container">
+  <a class="brand" href="/index.html">EduNexus</a>
+  <nav class="nav">
+    <a href="/login.html">Вход</a><a href="/register.html">Регистрация</a>
+    <a href="/dashboard.html">Дашборд</a><a href="/profile.html">Профиль</a>
+  </nav>
+</div></header>
+<main class="container">
+  <section class="hero">
+    <h1>Современная образовательная платформа</h1>
+    <p class="small">Материалы, тесты, ежедневные задания, рейтинг и модерация в одном месте.</p>
+  </section>
+  <section class="grid cols-3 section">
+    <article class="card"><h3>Материалы</h3><p>Пользователи загружают контент, админ модерирует.</p></article>
+    <article class="card"><h3>Тесты и задания</h3><p>Создавайте и проходите тесты. Получайте XP.</p></article>
+    <article class="card"><h3>Геймификация</h3><p>XP, уровни и лидерборд учеников.</p></article>
+  </section>
+  <section class="card section">
+    <h3>Гостевая отправка материала</h3>
+    <form id="guest-material-form">
+      <input name="title" placeholder="Название" required />
+      <textarea name="description" placeholder="Описание" required></textarea>
+      <input name="category" placeholder="Категория" />
+      <input type="file" name="file" required />
+      <button type="submit">Отправить на модерацию</button>
+    </form>
+    <p id="guest-material-msg" class="small"></p>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

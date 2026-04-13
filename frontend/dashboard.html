@@ -1,0 +1,44 @@
+<!doctype html><html lang="ru"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Дашборд | EduNexus</title><link rel="stylesheet" href="styles.css"/></head>
+<body data-page="dashboard"><main class="container section">
+  <div class="row"><h2>Дашборд</h2><button id="logout" class="secondary">Выйти</button></div>
+  <div id="whoami" class="small"></div>
+
+  <section class="card section">
+    <h3>Каталог материалов</h3>
+    <div class="list" id="materials-list"></div>
+  </section>
+
+  <section class="card section">
+    <h3>Загрузка материала</h3>
+    <form id="material-form">
+      <input name="title" placeholder="Название" required />
+      <textarea name="description" placeholder="Описание" required></textarea>
+      <input name="category" placeholder="Категория" />
+      <input type="file" name="file" required />
+      <button type="submit">Загрузить</button>
+    </form>
+    <p id="material-msg" class="small"></p>
+  </section>
+
+  <section class="card section">
+    <h3>Тесты</h3>
+    <form id="test-form">
+      <input name="title" placeholder="Название теста" required />
+      <textarea name="questions" placeholder='JSON вопросов: [{"q":"2+2","options":["3","4"],"correctIndex":1}]' required></textarea>
+      <button type="submit">Создать тест</button>
+    </form>
+    <div class="list" id="tests-list"></div>
+  </section>
+
+  <section class="card section">
+    <h3>Лидерборд учеников</h3>
+    <div class="list" id="leaderboard"></div>
+  </section>
+
+  <section class="card section hidden" id="admin-panel">
+    <h3>Админ-панель модерации</h3>
+    <div class="list" id="moderation-list"></div>
+  </section>
+</main><script src="app.js"></script></body></html>
